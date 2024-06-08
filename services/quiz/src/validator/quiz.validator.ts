@@ -1,7 +1,7 @@
+import { ApiResponse } from "@elsa-test/common/src/index";
 import { SubmitAnswerParams } from "dto/submit-answer.dto";
 import { NextFunction, Request, Response } from "express";
 import { quizExists } from "service/quiz.service";
-import { ApiResponse } from "types/ApiResponse";
 
 const quizValidator = async (
   request: Request,
