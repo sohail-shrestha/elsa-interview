@@ -1,19 +1,6 @@
 version: "3.8"
 
 services:
-  app:
-    build: .
-    volumes:
-      - .:/app
-      - /app/node_modules
-    ports:
-      - "3000:3000"
-    platform: linux/amd64 # Specify platform for the app service
-    depends_on:
-      - db
-    environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/elsa-db
-
   db:
     image: postgres:13
     environment:
