@@ -2,10 +2,10 @@ import "reflect-metadata";
 
 import bodyParser from "body-parser";
 
-import { AppDataSource, populateQuiz } from "@elsa-test/common/build/src/index";
+import { AppDataSource, populateQuiz } from "@elsa-test/common/src/index";
 import cors from 'cors';
 import express from "express";
-import { quizRoute } from "routes";
+import { quizRoute } from "./routes";
 
 const app = express(); 
 

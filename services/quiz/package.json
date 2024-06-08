@@ -5,7 +5,7 @@
     "test": "jest",
     "start": "node build/src/index.js",
     "dev": "npx tsc-watch --noClear -p ./tsconfig.json  --onSuccess \"node ./build/src/index.js\" ",
-    "dev:test": "npx ts-node src/index.ts",
+    "dev:test": "ts-node -r tsconfig-paths/register src/index.ts",
     "build": "rm -rf dist/* && tsc -p tsconfig.json",
     "clean:build": "rm -rf build/*"
   },
