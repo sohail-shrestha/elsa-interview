@@ -1,0 +1,1 @@
+{"version":3,"file":"dictionary.js","sourceRoot":"","sources":["../../../src/mocks/dictionary.ts"],"names":[],"mappings":";;;AAIA,IAAM,YAAY,GAAe;IAC/B,UAAU,EACR,iFAAiF;IACnF,SAAS,EAAE,iCAAiC;IAC5C,SAAS,EAAE,+BAA+B;IAC1C,SAAS,EAAE,+DAA+D;IAC1E,UAAU,EAAE,+DAA+D;IAC3E,WAAW,EACT,iFAAiF;IACnF,UAAU,EAAE,yCAAyC;IACrD,MAAM,EAAE,4DAA4D;CACrE,CAAC;AAEO,oCAAY"}

@@ -1,0 +1,36 @@
+{
+  "name": "services",
+  "type": "module",
+  "private": "true",
+  "workspaces": [
+    "./common",
+    "./quiz"
+  ],
+  "scripts": {
+    "clean": "npm run clean --workspaces --if-present && tsc --build --clean",
+    "build": "npm run build --workspaces --if-present && tsc -b "
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "jest": "^29.7.0",
+    "tsc-watch": "^6.2.0",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "install": "^0.13.0",
+    "npm": "^10.8.1",
+    "pg": "^8.12.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  }
+}

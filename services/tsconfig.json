@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "composite": true,
+    "lib": ["ES6", "es2022"],
+    "declaration": true, 
+    "sourceMap": true  },
+  "files": [],
+  "references": [
+    { "path": "./common" },
+    { "path": "./quiz" }
+  ],
+
+  "exclude": ["./node_modules"]
+}
