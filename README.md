@@ -4,7 +4,7 @@ This project is the interview assignment for ELSA Courp.
 
 # Setting up the project.
 
-Setting up the backend is fairly straightforward. Run the following `cd backend && docker compose up -d` and you should have your back end running with the database. For setting up the front end, as I do not have a docker set up for this, run `cd front-end && npm install && npm run dev`.
+Setting up the backend is fairly straightforward. Run the following `cd services && docker compose up -d` and you should have your back end running with the database. For setting up the front end, as I do not have a docker set up for this, run `cd front-end && npm install && npm run dev`.
 
 
 # System Design
