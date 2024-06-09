@@ -1,4 +1,4 @@
-import { User } from '@elsa-test/common/src/index';
+import { AppDataSource, User } from '@elsa-test/common/src/index';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -20,4 +20,7 @@ const JWT_SECRET = 'your_secret_key';
     return jwt.verify(token, JWT_SECRET);
 };
 
+
+
 export { comparePasswords, generateToken, hashPassword, verifyToken };
+
