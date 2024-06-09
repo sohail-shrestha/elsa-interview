@@ -7,8 +7,8 @@ export class User {
   id!: number;
 
   @Column({ type: "varchar", unique: true, nullable: false })
-  email!: string;
+  username!: string;
 
   @Column({ type: "varchar", nullable: false })
-  name!: string;
+  passwordHash!: string;
 }

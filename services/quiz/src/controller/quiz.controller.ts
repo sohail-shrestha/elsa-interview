@@ -2,7 +2,7 @@ import { SubmitAnswerParams } from "dto/submit-answer.dto";
 import express, { Request, Response } from "express";
 import { generateQuiz, getAllQuiz } from "service/quiz.service";
 import { GeneratedQuiz } from "types";
-import { ApiResponse } from "types/ApiResponse";
+import { ApiResponse } from "@elsa-test/common/src/index";
 import { quizValidator, submitParamsCheck } from "validator/quiz.validator";
 
 const app = express();
