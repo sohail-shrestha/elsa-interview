@@ -27,7 +27,7 @@ app.get("/:id", quizValidator, async (req: Request, res: Response<ApiResponse<Ge
   });
 });
 
-app.post("/submit", authMiddleware, submitParamsCheck ,async (req: Request<SubmitAnswerParams>, res: Response) => {
+app.post("/submit", authMiddleware, submitParamsCheck ,async (req: Request<SubmitAnswerParams>, res: Response<ApiResponse>) => {
     const { answer, questionId, quizId } = req.body;
     const {id} = res.locals.user;
    await createAnswer({
@@ -36,6 +36,11 @@ app.post("/submit", authMiddleware, submitParamsCheck ,async (req: Request<Submi
       quizId, 
       userId: id
     })
+    res.json({
+      success: true,
+      message: "Answer has been submitted."
+    })
+
 })
 
 export { app as quizController };
