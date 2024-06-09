@@ -1,4 +1,4 @@
-import { AppDataSource, User } from '@elsa-test/common/src/index';
+import {  User } from '@elsa-test/common/src/index';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -16,11 +16,12 @@ const JWT_SECRET = 'your_secret_key';
     return jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
 };
 
- const verifyToken = (token: string): any => {
+ const verifyToken = (token: string)  => {
     return jwt.verify(token, JWT_SECRET);
 };
 
+const decodeJwt = (token: string) => jwt.verify(token, JWT_SECRET)
 
 
-export { comparePasswords, generateToken, hashPassword, verifyToken };
+export { comparePasswords, generateToken, hashPassword, verifyToken, decodeJwt };
 
