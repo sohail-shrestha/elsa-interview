@@ -3,7 +3,7 @@ import { Answer, Question, Quiz, User } from "../entities/index";
 
 const AppDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
+  host: 'db',
   port: 5432,
   username: "postgres",
   password: "postgres",
