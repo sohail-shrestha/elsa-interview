@@ -3,14 +3,16 @@ import {
   Entity,
   JoinColumn,
   OneToOne,
-  PrimaryGeneratedColumn,
+  PrimaryGeneratedColumn
 } from "typeorm";
 
+import { User } from '../entities';
 import { Question } from "./question.entity";
 import { Quiz } from "./quiz.entity";
 
 
 @Entity()
+// @Unique(['answer',"question", ])
 export class Answer {
   @PrimaryGeneratedColumn()
   id!: number;
@@ -22,11 +24,11 @@ export class Answer {
   @JoinColumn()
   question!: Question;
 
-  // @OneToOne((_) => User)
-  // @JoinColumn()
-  // user!: User;
+  @OneToOne((_) => User)
+  @JoinColumn()
+  user!: User;
 
-  @OneToOne((_) => Quiz)
+  @OneToOne((_) => Quiz, quiz => quiz.id)
   @JoinColumn()
   quiz!: Quiz;
 

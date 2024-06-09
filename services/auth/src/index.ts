@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from 'cors';
 import express from "express";
 import "reflect-metadata";
-import { authRouter } from "routes";
+import { authRouter } from "./routes";
 
 const app = express(); 
 
