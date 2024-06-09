@@ -18,7 +18,7 @@ app.get("auth/test", (req, res) => {
     res.json({ status: "ok" });
   });
   
-app.use(authRouter)
+app.use("/auth/", authRouter)
 
 app.listen(3001, () => {
     console.log(`Server is running on http://localhost:3001`);

@@ -12,7 +12,6 @@ import { Quiz } from "./quiz.entity";
 
 
 @Entity()
-// @Unique(['answer',"question", ])
 export class Answer {
   @PrimaryGeneratedColumn()
   id!: number;
