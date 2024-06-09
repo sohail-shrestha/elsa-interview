@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@elsa-test/common": "^1.0.0"
+    "@elsa-test/common": "^1.0.0",
+    "@elsa-test/auth": "*"
   }
 }
