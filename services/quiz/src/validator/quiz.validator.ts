@@ -20,8 +20,9 @@ const submitParamsCheck = async   (
   response : Response<ApiResponse>,
   next: NextFunction,
 ) => {
-  const {answer, questionId, userId, quizId} = request.params
-  if(!answer || !questionId || !userId || !quizId)
+  const {answer, questionId, quizId} = request.body
+  console.log("RequestParams", request.params)
+  if(!answer || !questionId  || !quizId)
    response.status(400).json({
        success: false,
        error: "Invalid Request Parameters",

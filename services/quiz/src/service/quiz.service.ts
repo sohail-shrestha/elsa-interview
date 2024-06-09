@@ -5,7 +5,7 @@ import { GeneratedQuestion, GeneratedQuiz } from "types";
 
 const getAllQuiz: () => Promise<Quiz[]> = () => {
   return AppDataSource.getRepository(Quiz).find({
-    relations: { questions: true },
+    relations: {questions: true}
   });
 };
 

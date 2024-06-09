@@ -10,13 +10,30 @@ const createAnswer: (params: CreateAnswerParams) => Promise<void> = async ({
   userId,
   quizId,
 }: CreateAnswerParams) => {
-    isCorrectAnswer(questionId, answer)
-    await AppDataSource.getRepository(Answer).insert({
-        answer: answer,
+    const repo = await AppDataSource.getRepository(Answer)
+    const existingAnswer = await repo.findOne({
+      where: {
         question: {id: questionId},
         quiz: {id: quizId},
-        isCorrect: await isCorrectAnswer(questionId, answer)
+        user: {id: userId}
+      }
     })
+    if(existingAnswer)
+      await repo.update(existingAnswer.id ,{
+        answer,
+        question: {id: questionId},
+        quiz: {id: quizId},
+        user: {id: userId},
+        isCorrect: await isCorrectAnswer(questionId, answer)
+      })
+      else
+        await AppDataSource.getRepository(Answer).insert({
+            answer: answer,
+            question: {id: questionId},
+            quiz: {id: quizId},
+            user: {id: userId},
+            isCorrect: await isCorrectAnswer(questionId, answer)
+        })
 };
 
 export { createAnswer };
