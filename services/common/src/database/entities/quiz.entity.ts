@@ -1,4 +1,4 @@
-import { Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, JoinTable, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Question } from "./question.entity";
 
 @Entity()
@@ -6,7 +6,7 @@ export class Quiz {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @ManyToMany(() => Question, (question) => question.quiz)
+  @OneToMany(() => Question, (question) => question.quiz)
   @JoinTable()
   questions!: Question[];
 }

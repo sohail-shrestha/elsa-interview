@@ -1,9 +1,9 @@
 import { ApiResponse, User } from "@elsa-test/common/src";
-import { LoginDto } from "dto/login-dto";
-import { SignupDto } from "dto/signup-dto";
 import { Request, Response } from 'express';
-import { comparePasswords, generateToken } from "service/auth-service";
-import { createUser, getUser } from "service/user-service";
+import { LoginDto } from "../dto/login-dto";
+import { SignupDto } from "../dto/signup-dto";
+import { comparePasswords, generateToken } from "../service/auth-service";
+import { createUser, getUser } from '../service/user-service';
 
 const login = async (req: Request<LoginDto>, res: Response<ApiResponse<{token: string}>>): Promise<void> => {
     const { username, password } = req.body;

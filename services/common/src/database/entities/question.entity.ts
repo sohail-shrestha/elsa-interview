@@ -1,8 +1,8 @@
 import {
   Column,
   Entity,
-  ManyToMany,
-  PrimaryGeneratedColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn
 } from "typeorm";
 import { Quiz } from "./quiz.entity";
 
@@ -17,7 +17,7 @@ export class Question {
   @Column({ type: "varchar" })
   answer!: string;
 
-  @ManyToMany((_) => Quiz, (quiz) => quiz.questions)
+  @ManyToOne((_) => Quiz, (quiz) => quiz.questions)
   quiz!: Quiz[];
 
 }
