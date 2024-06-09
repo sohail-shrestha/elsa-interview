@@ -26,3 +26,8 @@ A single database microservice architecture is implemented here. This is primari
 4. **Monitoring and Observability:** For monitoring and observability, we would be adding a data dog agent as a sidecar.
 
 While I acknowledge that the current state of the repository may not fully meet the acceptance criteria, I want to emphasize that I dedicated significant effort to establishing a robust architecture for the application. Thank you for taking the time to review this documentation. I appreciate your insights and guidance. Have a wonderful day.
+
+# Completed Modules
+- Proxy
+- Quiz Service
+- Auth/User service
