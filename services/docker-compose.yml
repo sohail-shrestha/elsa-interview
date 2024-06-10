@@ -52,6 +52,9 @@ services:
       - event-bus
     networks:
       - app-network
+    volumes:
+      - .:/app
+      - /app/node_modules
 
   proxy-server:
     build:
