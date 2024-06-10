@@ -4,7 +4,7 @@
   "scripts": {
     "test": "jest",
     "start": "node build/src/index.js",
-    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "nodemon src/index.ts",
     "build": "rm -rf dist/* && tsc -p tsconfig.json",
     "clean:build": "rm -rf build/*"
   },
