@@ -1,0 +1,11 @@
+{
+  "extends":"../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./build",
+    "paths": {
+      "@elsa-test/common/*": ["../common/build/*"]
+    }
+  },
+  "include": ["src/**/*", "tests/**/*"],
+}
